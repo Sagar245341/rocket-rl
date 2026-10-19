@@ -1,0 +1,27 @@
+name: Python checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.13']
+    env:
+      SDL_VIDEODRIVER: dummy
+      SDL_AUDIODRIVER: dummy
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: python -m pip install -r requirements.txt
+      - run: python -m compileall -q app.py rocket_env.py rocket_visuals.py checkpoints.py train.py test.py benchmark.py report.py record_demo.py
+      - run: python -m unittest discover -p "test_*.py" -v
+      - run: python benchmark.py --episodes 2 --phases 1 --controllers guidance random --output results/ci-benchmark

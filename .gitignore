@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+logs/
+results/
+*.pyc
+models/preliminary/
+models/augmented/
+.pytest_cache/
+.ruff_cache/

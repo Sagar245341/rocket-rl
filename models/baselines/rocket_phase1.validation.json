@@ -1,0 +1,37 @@
+[
+  {
+    "timesteps": 50000,
+    "success_rate": 0.0,
+    "mean_reward": -209.33726328268784
+  },
+  {
+    "timesteps": 100000,
+    "success_rate": 0.0,
+    "mean_reward": -215.496045798469
+  },
+  {
+    "timesteps": 150000,
+    "success_rate": 0.0,
+    "mean_reward": -216.5274097059651
+  },
+  {
+    "timesteps": 200000,
+    "success_rate": 0.0,
+    "mean_reward": -217.7061275200577
+  },
+  {
+    "timesteps": 250000,
+    "success_rate": 0.0,
+    "mean_reward": -218.4133570681126
+  },
+  {
+    "timesteps": 300000,
+    "success_rate": 0.0,
+    "mean_reward": -218.1186763900051
+  },
+  {
+    "timesteps": 301056,
+    "success_rate": 0.0,
+    "mean_reward": -217.91240094250148
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "phases": [1, 2, 3],
+  "episodes": 100,
+  "seed": 10000,
+  "action_seed": 98765,
+  "scenarios": {
+    "nominal": {"wind_scale": 1.0, "delay_scale": 1.0, "noise_scale": 1.0},
+    "wind_2x": {"wind_scale": 2.0, "delay_scale": 1.0, "noise_scale": 1.0},
+    "delay_2x": {"wind_scale": 1.0, "delay_scale": 2.0, "noise_scale": 1.0},
+    "noise_3x": {"wind_scale": 1.0, "delay_scale": 1.0, "noise_scale": 3.0},
+    "combined": {"wind_scale": 2.0, "delay_scale": 2.0, "noise_scale": 3.0}
+  }
+}

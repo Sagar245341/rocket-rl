@@ -1,0 +1,2 @@
+# Backwards-compatible filename. Install the maintained dependency list.
+-r requirements.txt

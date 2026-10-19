@@ -1,0 +1,47 @@
+[
+  {
+    "phase": 1,
+    "scenario": "nominal",
+    "controller": "guidance",
+    "episodes": 100,
+    "successes": 100,
+    "success_rate": 1.0,
+    "success_ci_low": 0.9630065017930143,
+    "success_ci_high": 1.0,
+    "mean_reward": 79.44979783254712,
+    "std_reward": 1.6260520195014947,
+    "mean_fuel": 16.889575675736516,
+    "successful_mean_fuel": 16.889575675736516,
+    "mean_duration": 16.976999999999997
+  },
+  {
+    "phase": 1,
+    "scenario": "nominal",
+    "controller": "ppo",
+    "episodes": 100,
+    "successes": 0,
+    "success_rate": 0.0,
+    "success_ci_low": 3.469446951953614e-18,
+    "success_ci_high": 0.03699349820698568,
+    "mean_reward": -210.5583546117931,
+    "std_reward": 4.736405539157673,
+    "mean_fuel": 40.0,
+    "successful_mean_fuel": null,
+    "mean_duration": 46.80079999999999
+  },
+  {
+    "phase": 1,
+    "scenario": "nominal",
+    "controller": "random",
+    "episodes": 100,
+    "successes": 2,
+    "success_rate": 0.02,
+    "success_ci_low": 0.00550196755016235,
+    "success_ci_high": 0.07001179072854388,
+    "mean_reward": -166.38131086569865,
+    "std_reward": 55.444211343465454,
+    "mean_fuel": 26.650104383591753,
+    "successful_mean_fuel": 16.78340419843099,
+    "mean_duration": 27.013
+  }
+]

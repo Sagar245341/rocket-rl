@@ -1,0 +1,109 @@
+{
+  "environment": "RocketEnv-v2",
+  "config": {
+    "phases": [
+      1
+    ],
+    "episodes": 100,
+    "seed": 10000,
+    "action_seed": 98765,
+    "scenarios": {
+      "nominal": {
+        "wind_scale": 1.0,
+        "delay_scale": 1.0,
+        "noise_scale": 1.0
+      },
+      "wind_2x": {
+        "wind_scale": 2.0,
+        "delay_scale": 1.0,
+        "noise_scale": 1.0
+      },
+      "delay_2x": {
+        "wind_scale": 1.0,
+        "delay_scale": 2.0,
+        "noise_scale": 1.0
+      },
+      "noise_3x": {
+        "wind_scale": 1.0,
+        "delay_scale": 1.0,
+        "noise_scale": 3.0
+      },
+      "combined": {
+        "wind_scale": 2.0,
+        "delay_scale": 2.0,
+        "noise_scale": 3.0
+      }
+    }
+  },
+  "controllers": [
+    "ppo",
+    "guidance",
+    "random"
+  ],
+  "checkpoints": {
+    "1": {
+      "path": "models\\baselines\\rocket_phase1.zip",
+      "sha256": "1d25485f4f435c9255ff1a06d0c9de3d9260b106bb18d19271c7b3650a49b10a",
+      "metadata": {
+        "environment": "RocketEnv-v2",
+        "phase": 1,
+        "seed": 42,
+        "total_timesteps": 301056,
+        "checkpoint_timesteps": 50000,
+        "rewards": {
+          "landing": 100.0,
+          "crash": -100.0,
+          "fuel": -2.0
+        },
+        "physics": {
+          "wind_scale": 1.0,
+          "delay_scale": 1.0,
+          "noise_scale": 1.0
+        },
+        "selection": "validation landing rate, then mean reward",
+        "validation_seed_start": 5000,
+        "validation_episodes": 10,
+        "validation_success_rate": 0.0,
+        "elapsed_seconds": 323.38,
+        "resume": null,
+        "training_config": {
+          "config": "D:\\rl\\configs\\training.json",
+          "phase": 1,
+          "timesteps": 300000,
+          "seed": 42,
+          "threads": 1,
+          "output": null,
+          "resume": null,
+          "learning_rate": 0.0003,
+          "gamma": 0.995,
+          "landing_reward": 100.0,
+          "crash_penalty": -100.0,
+          "fuel_penalty": -2.0,
+          "eval_freq": 50000,
+          "eval_episodes": 10
+        },
+        "versions": {
+          "gymnasium": "1.4.0",
+          "stable-baselines3": "2.9.0",
+          "numpy": "2.5.4",
+          "torch": "2.14.1"
+        }
+      }
+    }
+  },
+  "elapsed_seconds": 113.02,
+  "python": "3.13.0",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "versions": {
+    "numpy": "2.5.4",
+    "gymnasium": "1.4.0",
+    "stable-baselines3": "2.9.0",
+    "torch": "2.14.1"
+  },
+  "source_sha256": {
+    "rocket_env.py": "4ba39d48cc36cc61bd96b5c93bfdfbcd1a83727f8abf9bf37cf25745818877ee",
+    "benchmark.py": "82575c6a5202bc12db6e42104fb4531ebf9295ab863bdc975da5b2989129d103",
+    "train.py": "f401e0162b1d711765f34a353caf2a852b7844b34f663b7e04177422ce5248d8",
+    "checkpoints.py": "60b260fbfcd88025d952033840a478370699c36f251b9a648a492a31669f832b"
+  }
+}

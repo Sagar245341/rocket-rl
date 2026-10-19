@@ -1,0 +1,50 @@
+{
+  "environment": "RocketEnv-v2",
+  "phase": 1,
+  "seed": 42,
+  "total_timesteps": 100352,
+  "checkpoint_timesteps": 50000,
+  "rewards": {
+    "landing": 100.0,
+    "crash": -100.0,
+    "fuel": -2.0
+  },
+  "physics": {
+    "wind_scale": 1.0,
+    "delay_scale": 1.0,
+    "noise_scale": 1.0
+  },
+  "selection": "validation landing rate, then mean reward",
+  "validation_seed_start": 5000,
+  "validation_episodes": 10,
+  "validation_success_rate": 1.0,
+  "elapsed_seconds": 182.36,
+  "resume": null,
+  "method": "behavior cloning + PPO",
+  "demonstration_seed_start": 1000,
+  "training_config": {
+    "config": "configs\\guided_training.json",
+    "phase": 1,
+    "timesteps": 100000,
+    "seed": 42,
+    "threads": 1,
+    "output": "models\\augmented\\rocket_phase1",
+    "resume": null,
+    "learning_rate": 3e-05,
+    "gamma": 0.9995,
+    "landing_reward": 100.0,
+    "crash_penalty": -100.0,
+    "fuel_penalty": -2.0,
+    "eval_freq": 25000,
+    "eval_episodes": 10,
+    "pretrain_episodes": 32,
+    "pretrain_epochs": 100,
+    "pretrain_augmentation": 32000
+  },
+  "versions": {
+    "gymnasium": "1.4.0",
+    "stable-baselines3": "2.9.0",
+    "numpy": "2.5.4",
+    "torch": "2.14.1"
+  }
+}

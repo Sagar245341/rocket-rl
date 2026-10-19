@@ -1,0 +1,45 @@
+{
+  "environment": "RocketEnv-v2",
+  "phase": 1,
+  "seed": 42,
+  "total_timesteps": 301056,
+  "checkpoint_timesteps": 50000,
+  "rewards": {
+    "landing": 100.0,
+    "crash": -100.0,
+    "fuel": -2.0
+  },
+  "physics": {
+    "wind_scale": 1.0,
+    "delay_scale": 1.0,
+    "noise_scale": 1.0
+  },
+  "selection": "validation landing rate, then mean reward",
+  "validation_seed_start": 5000,
+  "validation_episodes": 10,
+  "validation_success_rate": 0.0,
+  "elapsed_seconds": 323.38,
+  "resume": null,
+  "training_config": {
+    "config": "D:\\rl\\configs\\training.json",
+    "phase": 1,
+    "timesteps": 300000,
+    "seed": 42,
+    "threads": 1,
+    "output": null,
+    "resume": null,
+    "learning_rate": 0.0003,
+    "gamma": 0.995,
+    "landing_reward": 100.0,
+    "crash_penalty": -100.0,
+    "fuel_penalty": -2.0,
+    "eval_freq": 50000,
+    "eval_episodes": 10
+  },
+  "versions": {
+    "gymnasium": "1.4.0",
+    "stable-baselines3": "2.9.0",
+    "numpy": "2.5.4",
+    "torch": "2.14.1"
+  }
+}

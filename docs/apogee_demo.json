@@ -1,0 +1,34 @@
+{
+  "fps": 25,
+  "frames": 1875,
+  "duration_seconds": 75.0,
+  "flights": [
+    {
+      "controller": "guidance",
+      "phase": 3,
+      "seed": 10000,
+      "outcome": "LANDED",
+      "reward": 79.30955545329631,
+      "fuel_used": 18.128213066023456,
+      "steps": 856
+    },
+    {
+      "controller": "ppo",
+      "phase": 3,
+      "seed": 10000,
+      "outcome": "LANDED",
+      "reward": 81.6981289581642,
+      "fuel_used": 17.109797823430217,
+      "steps": 806
+    },
+    {
+      "controller": "random",
+      "phase": 3,
+      "seed": 10000,
+      "outcome": "CRASHED",
+      "reward": -119.45520294957868,
+      "fuel_used": 7.8285165415036815,
+      "steps": 372
+    }
+  ]
+}
